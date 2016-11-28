@@ -1,7 +1,11 @@
 function buildTree() {
 	console.log("Making attempt...");
-	$.getJSON("/decisionTree.json", function( data ) {
-		console.log( data );
+	$.ajax({
+		url:"http://lucasausbury.github.io/dev/decisionTree.json", 
+		dataType:"json",
+		success: function( data ) {
+			console.log( data );
+		}
 	});
 }
 

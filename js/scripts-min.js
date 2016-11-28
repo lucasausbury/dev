@@ -1,1 +1,1 @@
-function buildTree(){console.log("Making attempt..."),$.getJSON("/decisionTree.json",function(e){console.log(e)})}$(document).ready(function(){var e=$("#root"),o=$(".node-template").detach(),t=$(".decider-template").detach();buildTree()});
+function buildTree(){console.log("Making attempt..."),$.ajax({url:"http://lucasausbury.github.io/dev/decisionTree.json",dataType:"json",success:function(e){console.log(e)}})}$(document).ready(function(){var e=$("#root"),t=$(".node-template").detach(),o=$(".decider-template").detach();buildTree()});
