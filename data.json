@@ -1,0 +1,177 @@
+"0":"Clump Thickness",
+"1":"Uniformity of Cell Size",
+"2":"Uniformity of Cell Shape",
+"3":"Marginal Adhesion",
+"4":"Single Epithelial Cell Size",
+"5":"Bare Nuclei",
+"6":"Bland Chromatin",
+"7":"Normal Nucleoli",
+"8":"Mitoses"
+
+{
+	"0":{	//uniformity of cell size, 2
+		"fulcrum":"1",
+		"branches":{
+			"<= 2":"1",
+			"> 2":"10" 
+		}
+	}, "1":{	//bare nuclei, 3
+		"fulcrum":"5",
+		"branches":{
+			"<= 3":"2",
+			"> 3":"3"
+		}
+	}, "2":{	//benign
+		"fulcrum":"-1",
+		"class":"0",
+		"probability":0.9950664792
+	}, "3":{	//clump thickness, 3
+		"fulcrum":"0",
+		"branches":{
+			"<= 3":"4",
+			"> 3":"5" 
+		}
+	}, "4":{	//benign
+		"fulcrum":"-1",
+		"class":"0",
+		"probability":1.0
+	}, "5":{	//bland chromatin, 2
+		"fulcrum":"6",
+		"branches":{
+			"<= 2":"6",
+			"> 2":"9"
+		}
+	}, "6":{	//marginal adhesion, 3
+		"fulcrum":"3",
+		"branches":{
+			"<= 3":"7",
+			"> 3":"8" 
+		}
+	}, "7":{	//malignant
+		"fulcrum":"-1",
+		"class":"1",
+		"probability":1.0
+	}, "8":{	//benign
+		"fulcrum":"-1",
+		"class":"0",
+		"probability":1.0
+	}, "9":{	//malignant
+		"fulcrum":"-1",
+		"class":"1",
+		"probability":0.9925558313
+	}, "10":{	//uniformity of cell shape, 2
+		"fulcrum":"2",
+		"branches":{
+			"<= 2":"11",
+			"> 2":"16"
+		}
+	}, "11":{	//clump thickness, 5
+		"fulcrum":"0",
+		"branches":{
+			"<= 5":"12",
+			"> 5":"15"
+		}
+	}, "12":{	//marginal adhesion, 7
+		"fulcrum":"3",
+		"branches":{
+			"<= 7":,"13"
+			"> 7":"14"
+		}
+	}, "13":{	//benign
+		"fulcrum":"-1",
+		"class":"0",
+		"probability":1.0
+	}, "14":{	//malignant
+		"fulcrum":"-1",
+		"class":"1",
+		"probability":1.0
+	}, "15":{	//malignant
+		"fulcrum":"-1",
+		"class":"1",
+		"probability":1.0
+	}, "16":{	//uniformity of cell size, 4
+		"fulcrum":"1",
+		"branches":{
+			"<= 4":"17",
+			"> 4":"32"
+		}
+	}, "17":{	//bare nuclei, 2
+		"fulcrum":"5",
+		"branches":{
+			"<= 2":"18",
+			"> 2":"23"
+		}
+	}, "18":{	//marginal adhesion, 3
+		"fulcrum":"3",
+		"branches":{
+			"<= 3":"19",
+			"> 3":"22"
+		}
+	}, "19":{	//normal nucleoli, 7
+		"fulcrum":"7",
+		"branches":{
+			"<= 7":"20",
+			"> 7":"21"
+		}
+	}, "20":{	//benign
+		"fulcrum":"-1",
+		"class":"0",
+		"probability":0.9798270893
+	}, "21":{	//malignant
+		"fulcrum":"-1",
+		"class":"1",
+		"probability":1.0
+	}, "22":{	//malignant
+		"fulcrum":"-1",
+		"class":"1",
+		"probability":1.0
+	}, "23":{	//clump thickness, 6
+		"fulcrum":"0",
+		"branches":{
+			"<= 6":"24",
+			"> 6":"31"
+		}
+	}, "24":{	//uniformity of cell size, 3
+		"fulcrum":"1",
+		"branches":{
+			"<= 3":"25",
+			"> 3":"28"
+		}
+	}, "25":{	//clump thickness, 5
+		"fulcrum":"0",
+		"branches":{
+			"<= 5":"26",
+			"> 5":"27"
+		}
+	}, "26":{	//malignant
+		"fulcrum":"-1",
+		"class":"1",
+		"probability":0.9166666667
+	}, "27":{	//benign
+		"fulcrum":"-1",
+		"class":"0",
+		"probability":1.0
+	}, "28":{	//marginal adhesion
+		"fulcrum":"3",
+		"branches":{
+			"<= 3":"29",
+			"> 3":"30"
+		}
+	}, "29":{	//benign
+		"fulcrum":"-1",
+		"class":"0",
+		"probability":0.8272884283
+	}, "30":{	//malignant
+		"fulcrum":"-1",
+		"class":"1",
+		"probability":1.0
+	}, "31":{	//malignant
+		"fulcrum":"-1",
+		"class":"1",
+		"probability":0.9685435672
+	}, "32":{	//malignant
+		"fulcrum":"-1",
+		"class":"1",
+		"probability":0.9717514124
+	}
+}
