@@ -16,12 +16,23 @@ function renderQuestion( data, counter ) {
 }
 
 function buildTree() {
-	$.getJSON("http://lucasausbury.github.io/dev/decisionTree.json", function( data ) {
+	console.log( "A" );
+	$.getJSON("http://lucasausbury.github.io/dev/decisionTree.json", function( out ) {
+		alert("B");
+		var t = $node_tmp.clone();
+		var x = null;
+
 		discriminants = data.discriminants;
 		classes = data.classes;
 
 		$root.html('');
-		$root.append( renderQuestion( data.data, 1 ) );
+		console.log( out );
+		for( var i in out.data ) {
+			x = out.data[i];
+
+			if( parseInt(x.fulcrum) >= 0 )
+				$root.append( t.render(x, node_dir) );
+		}
 	});
 }
 
@@ -37,7 +48,6 @@ $(document).ready(function() {
 		}, 'control-options':{
 			'html':function( params ) {
 				var $cont = $('<div />');
-				var name = 
 
 				for( var i in this.branches ) {
 					var $t = $decd_tmp.clone();
