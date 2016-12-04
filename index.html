@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
 	</head><body>
 		<div class="container">
-			<h1>Hello, world!</h1>
+			<h1>A Predictive Analysis of Breast Cancer Risk Factors</h1>
 			<p class="lead">Lorem ipsum</p>
 
 			<div id="root"></div>
@@ -17,8 +17,7 @@
 				<div class="node-template">
 					<div class="form-group">
 						<label class="control-label"></label>
-						<div class="control-options"></div>
-						<div class="control-path"></div>
+						<div class="control-options" style="padding-left:2rem;"></div>
 					</div>
 				</div><div class="decider-template">
 					<label class="custom-control custom-radio">
@@ -26,6 +25,13 @@
 						<span class="custom-control-indicator"></span>
 						<span class="custom-control-description"></span>
 					</label>
+				</div><div class="result-template">
+					<div class="form-group" style="padding:1.5rem;">
+						<h4 class="class_label"></h4>
+						<p class="lead">According to the data we analyzed, this scenario has an 
+							<span class="probability"></span>% chance of being 
+							<strong class="class_label" style="text-transform:lowercase;"></strong>.</p>
+					</div>
 				</div>
 			</div>
 		</div>
